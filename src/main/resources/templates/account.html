@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<htmlxmlns:th="http: //www.thymeleaf.org">
+
+	<head>
+		<title>Create new Account</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+			integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+			integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+			integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+			crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">&nbsp;</div>
+				<div class="col-4">
+					<form method="post" action="#" th:action="@{/accounts/create}" th:object="${account}">
+						<div class="form-group">
+
+							<label for="firstName">First Name</label>
+							<input class="form-control" type="text" id="firstName" th:field="*{firstName}">
+
+							<label for="lastName">Last Name</label>
+							<input class="form-control" type="text" id="lastName" th:field="*{lastName}">
+
+							<label for="dob">Date of Birth(yyyy-MM-dd)</label>
+							<input class="form-control" type="text" id="dob" th:field="*{dob}">
+
+							<label for="mobileNumber">Mobile Number</label>
+							<input class="form-control" type="text" id="mobileNumber" th:field="*{mobileNumber}">
+
+							<label for="emailId">Email Address</label>
+							<input class="form-control" type="text" id="emailId" th:field="*{emailId}">
+
+							<label for="homeAddress">Home Address</label>
+							<input class="form-control" type="text" id="homeAddress" th:field="*{homeAddress}">
+
+							<label for="mailingAddress">Mailing Address</label>
+							<input class="form-control" type="text" id="mailingAddress" th:field="*{mailingAddress}">
+							<label for="ssn">SSN</label>
+							<input class="form-control" type="text" id="ssn" th:field="*{ssn}">
+							<label for="minimumBalance">Minimum Balance</label>
+							<input class="form-control" type="text" id="minimumBalance" th:field="*{minimumBalance}">
+							<label for="accountType">Account Type</label>
+							<input class="form-control" type="text" id="accountType" th:field="*{accountType}"><br>
+							<p><input value="Submit" type="submit" class="btn btn-primary"></p>
+							<p><input value="Reset" type="reset" class="btn btn-danger"></p>
+						</div>
+					</form>
+				</div>
+				<div class="col-4">&nbsp;</div>
+			</div>
+
+		</div>
+	</body>
+
+	</html>
